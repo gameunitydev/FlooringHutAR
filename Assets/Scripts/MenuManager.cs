@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -57,7 +58,7 @@ public class MenuManager : MonoBehaviour
 
     public void ButtonClick(GameObject button)
     {
-        // Switch can not be done here
+        // Switch can not be implemented here
 
         if (button.name == _buttonTry.name)
         {
@@ -85,8 +86,9 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    // "Separated" version
     public void TryClick()
     {
-        // "Separated" version
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
