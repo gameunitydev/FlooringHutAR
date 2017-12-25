@@ -44,7 +44,7 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // When fade-out animation stops, enables all buttons
+        // When fade-out animation stops, enables all buttons and destroys unnecessary fade-image
         if (_imageFade != null && !_imageFadeAnimation.isPlaying)
         {
             foreach (var button in _menuButtons)
@@ -86,7 +86,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    // "Separated" version
+    // For "Separated" version
     public void TryClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
