@@ -106,6 +106,7 @@ public class API_AR : MonoBehaviour
         dropdown2.ClearOptions();
         dropdown2.AddOptions(categoriesTitlesList);
 
+        FillImages();
     }
 
     public void OnValueChangedDrop2(Dropdown dropdown2, Dropdown dropdown3)
@@ -143,6 +144,18 @@ public class API_AR : MonoBehaviour
 
         dropdown3.ClearOptions();
         dropdown3.AddOptions(categoriesTitlesList);
+
+        FillImages();
+    }
+
+    public void OnValueChangedDrop3(Dropdown dropdown3)
+    {
+
+        FillImages();
+    }
+
+    private void FillImages()
+    {
 
     }
 

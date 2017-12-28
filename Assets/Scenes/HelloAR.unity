@@ -2256,7 +2256,7 @@ MonoBehaviour:
   FirstPersonCamera: {fileID: 989943870}
   TrackedPlanePrefab: {fileID: 1654175882956584, guid: 6a35c744e5010405c847fad90282d2be,
     type: 2}
-  AndyAndroidPrefab: {fileID: 1190091649889860, guid: 242a320930b81430ba610f94f9b760c8,
+  AndyAndroidPrefab: {fileID: 1713720970831124, guid: 48cf3db713b05454489a227816f86c4f,
     type: 2}
   SearchingForPlaneUI: {fileID: 1133631540}
 --- !u!1 &629573643
@@ -4928,7 +4928,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 363912637}
-        m_MethodName: BackToMenu
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

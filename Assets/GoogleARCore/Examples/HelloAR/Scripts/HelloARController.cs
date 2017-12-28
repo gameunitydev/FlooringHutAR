@@ -30,6 +30,8 @@ namespace GoogleARCore.HelloAR
     /// </summary>
     public class HelloARController : MonoBehaviour
     {
+        private bool isPlaced;
+
         /// <summary>
         /// The first-person camera being used to render the passthrough camera image (i.e. AR background).
         /// </summary>
@@ -126,7 +128,7 @@ namespace GoogleARCore.HelloAR
             TrackableHit hit;
             TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinBounds | TrackableHitFlags.PlaneWithinPolygon;
 
-            if (Session.Raycast(touch.position.x, touch.position.y, raycastFilter, out hit))
+            if (Session.Raycast(touch.position.x, touch.position.y, raycastFilter, out hit) && !isPlaced)
             {
                 var andyObject = Instantiate(AndyAndroidPrefab, hit.Pose.position, hit.Pose.rotation);
 
@@ -141,6 +143,12 @@ namespace GoogleARCore.HelloAR
 
                 // Make Andy model a child of the anchor.
                 andyObject.transform.parent = anchor.transform;
+
+                isPlaced = true;
+            }
+            else if (Session.Raycast(touch.position.x, touch.position.y, raycastFilter, out hit) && isPlaced)
+            {
+                //Delete old, (change material inside ARManager/API_AR, on Image clock) and place new one
             }
         }
 
