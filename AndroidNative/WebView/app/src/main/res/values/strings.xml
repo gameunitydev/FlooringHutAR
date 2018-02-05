@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Flooring Hut</string>
+
+    <string name="action_home">Home</string>
+    <string name="action_back">Back</string>
+    <string name="action_forward">Forward</string>
+    <string name="action_bookmark">Bookmark</string>
+
+    <string name="app_logo">Logo</string>
+    <string name="button_shop">Shop</string>
+    <string name="button_login">Login</string>
+    <string name="button_register_now">Register Now</string>
+    <string name="button_trade_signup">Trade Signup</string>
+</resources>
